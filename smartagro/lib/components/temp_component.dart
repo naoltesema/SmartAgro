@@ -15,15 +15,20 @@ class TempComponent extends StatelessWidget {
       ),
       child: Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: [
-            Text(
-              "date here",
-              style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+            Text('new component'),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  "date here",
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.w700),
+                ),
+                Text('water intake'),
+              ],
             ),
-            Text('water intake'),
-            Image.asset('asset/botanic.png'),
           ],
         ),
       ),

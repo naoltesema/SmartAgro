@@ -11,24 +11,32 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.black,
       appBar: AppBar(
+        backgroundColor: Colors.black,
         title: Text(
           'Goodmorning',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.w100),
+          style: TextStyle(
+            color: Colors.white,
+            fontSize: 24,
+            fontWeight: FontWeight.w700,
+          ),
         ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(15),
-        child: Column(
-          spacing: 20,
-          children: [
-            TempComponent(),
-            SizedBox(height: 10),
-            SmallComponent(),
-            TipsComponent(),
-            SizedBox(height: 10),
-            TipsComponent(),
-            
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            spacing: 20,
+            children: [
+              TempComponent(),
+              SizedBox(height: 10),
+
+              Row(spacing: 45, children: [SmallComponent(), SmallComponent()]),
+              SizedBox(height: 10),
+              TipsComponent(),
+              TipsComponent(),
+              TipsComponent(),
+            ],
+          ),
         ),
       ),
     );
